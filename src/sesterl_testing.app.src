@@ -1,4 +1,4 @@
-{application, sesterl_stdlib, [
+{application, sesterl_testing, [
     {description, "A testing library for Sesterl wrapping EUnit"},
     {vsn, "0.0.1"},
     {registered, []},
