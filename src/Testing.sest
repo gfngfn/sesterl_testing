@@ -1,4 +1,21 @@
-module Testing = struct
+module Testing :> sig
+  type t :: o
+  val it : fun(binary, fun() -> unit) -> t
+  val list : fun(list<t>) -> t
+  val equal<$a> : fun(-expect $a, -got $a) -> fun(binary, int) -> unit
+end = struct
+
+  type t = TestingDummy
+
+  val it : fun(binary, fun() -> unit) -> t = external 2 ```
+    it(Title, F) ->
+        {Title, F}.
+  ```
+
+  val list : fun(list<t>) -> t = external 1 ```
+    list(Ts) ->
+        Ts.
+  ```
 
   val equal<$a> : fun(-expect $a, -got $a) -> fun(binary, int) -> unit = external 2 ```
     equal(Expect, Got) ->
