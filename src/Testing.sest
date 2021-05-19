@@ -1,7 +1,7 @@
 module Testing = struct
 
   val equal<$a> : fun(-expect $a, -got $a) -> fun(binary, int) -> unit = external 2 ```
-    test_equal(Expect, Got) ->
+    equal(Expect, Got) ->
         fun(FileName, LineNumber) ->
             case Got of
                 Expect ->
