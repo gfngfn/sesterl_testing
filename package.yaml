@@ -1,0 +1,6 @@
+package: "sesterl_testing"
+
+source_directories:
+  - "./src"
+
+main_module: "Testing"

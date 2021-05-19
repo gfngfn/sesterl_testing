@@ -1,0 +1,15 @@
+{application, sesterl_stdlib, [
+    {description, "A testing library for Sesterl wrapping EUnit"},
+    {vsn, "0.0.1"},
+    {registered, []},
+    {modules, []},
+    {applications, [
+        kernel,
+        stdlib
+    ]},
+    {env, []},
+    {modules, []},
+
+    {licenses, ["MIT"]},
+    {links, []}
+]}.
