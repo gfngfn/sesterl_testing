@@ -5,7 +5,8 @@ module Testing :> sig
   val equal<$a> : fun(-expect $a, -got $a) -> fun(binary, int) -> unit
 end = struct
 
-  type t = TestingDummy
+  type t =
+    | TestingDummy
 
   val it : fun(binary, fun() -> unit) -> t = external 2 ```
     it(Title, F) ->
