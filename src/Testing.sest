@@ -1,6 +1,7 @@
 module Testing :> sig
   type t :: o
   val it : fun(binary, fun() -> unit) -> t
+  val perform<$a> : fun(binary, fun() -> [$a]unit) -> t
   val list : fun(list<t>) -> t
   val equal<$a> : fun(-expect $a, -got $a) -> fun(binary, int) -> unit
 end = struct
@@ -10,6 +11,11 @@ end = struct
 
   val it : fun(binary, fun() -> unit) -> t = external 2 ```
     it(Title, F) ->
+        {Title, F}.
+  ```
+
+  val perform<$a> : fun(binary, fun() -> [$a]unit) -> t = external 2 ```
+    perform(Title, F) ->
         {Title, F}.
   ```
 
